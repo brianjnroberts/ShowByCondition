@@ -102,13 +102,8 @@ define([
 						callback: dojo.hitch(this, function (result) {
 							this.setParentDisplay(result);
 						}),
-<<<<<<< HEAD
 						error: function (error) {
-							alert(error.description);
-=======
-						error: function(error) {
 							console.error(error.description);
->>>>>>> 6e9bc77c5397e73c296913816929e62942bbe4da
 						}
 					}, this);
 				}
@@ -116,11 +111,11 @@ define([
 					mx.data.callNanoflow({
 						nanoflow: this.nanoflowName,
 						origin: this.mxform,
-    					context: this.mxcontext,
+						context: this.mxcontext,
 						callback: dojo.hitch(this, function (result) {
 							this.setParentDisplay(result);
 						}),
-						error: function(error) {
+						error: function (error) {
 							console.error(error.description);
 						}
 					}, this);
@@ -129,7 +124,6 @@ define([
 					console.error("Neither a nanoflow or a microflow was specified for show by condition widget.");
 				}
 			}
-<<<<<<< HEAD
 
 		},
 		// Reset subscriptions.
@@ -137,9 +131,9 @@ define([
 			var _objectHandle = null;
 			// Release handles on previous object, if any.
 			if (this._handles) {
-				this._handles.forEach(function (handle, i) {
-					mx.data.unsubscribe(handle);
-				});
+				this._handles.forEach(lang.hitch(this, function (handle, i) {
+					this.unsubscribe(handle);
+				}));
 				this._handles = [];
 			}
 			// When a mendix object exists create subscribtions. 
@@ -160,38 +154,6 @@ define([
 			// Clean up listeners, helper objects, etc. There is no need to remove listeners added with this.connect / this.subscribe / this.own.
 		},
 	});
-=======
-			
-        },
-        // Reset subscriptions.
-        _resetSubscriptions: function () {
-            var _objectHandle = null;
-            // Release handles on previous object, if any.
-            if (this._handles) {
-                this._handles.forEach(lang.hitch(this, function (handle, i) {
-	                this.unsubscribe(handle);
-                }));
-                this._handles = [];
-            }
-            // When a mendix object exists create subscribtions. 
-            if (this._contextObj) {
-                _objectHandle = this.subscribe({
-                    guid: this._contextObj.getGuid(),
-                    callback: lang.hitch(this, function (guid) {
-                        this._updateRendering();
-                    })
-                });
-                this._handles = [_objectHandle];
-            }
-        },
-
-        // mxui.widget._WidgetBase.uninitialize is called when the widget is destroyed. Implement to do special tear-down work.
-        uninitialize: function() {
-          //logger.debug(this.id + ".uninitialize");
-            // Clean up listeners, helper objects, etc. There is no need to remove listeners added with this.connect / this.subscribe / this.own.
-        },
-    });
->>>>>>> 6e9bc77c5397e73c296913816929e62942bbe4da
 });
 
 require(["ShowByCondition/widget/ShowByCondition"], function () {
