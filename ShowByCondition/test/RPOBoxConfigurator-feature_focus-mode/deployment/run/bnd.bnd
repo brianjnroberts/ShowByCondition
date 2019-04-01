@@ -1,0 +1,6 @@
+Private-Package: system, rpoboxconfigurator.proxies, rpoboxconfigurator.proxies.constants, rpoboxconfigurator.proxies.microflows, mxmodelreflection, mxmodelreflection.metamodelBuilder, mxmodelreflection.actions, mxmodelreflection.proxies, mxmodelreflection.proxies.microflows, system, system.actions, system.proxies, system.proxies.microflows, administration.proxies, administration.proxies.microflows, excelimporter.reader, excelimporter.reader.readers, excelimporter.reader.readers.replication, excelimporter.actions, excelimporter.proxies, excelimporter.proxies.constants, excelimporter.proxies.microflows, communitycommons, communitycommons.actions, communitycommons.proxies, communitycommons.proxies.constants, communitycommons.proxies.microflows
+Import-Package: *;resolution:=optional
+Service-Component: *
+Include-Resource: ../../userlib/;recursive:=true;filter:=!*.jar
+Bundle-Name: RPOBoxConfigurator_feature_focus_mode
+Bundle-SymbolicName: project

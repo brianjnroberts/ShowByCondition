@@ -1,0 +1,19 @@
+{
+  "Configuration": {
+    "DatabaseName": "default",
+    "DatabasePassword": "",
+    "DatabaseType": "HSQLDB",
+    "DatabaseHost": "",
+    "DatabaseUserName": "",
+    "DatabaseUseIntegratedSecurity": "False",
+    "ApplicationRootUrl": "http://localhost:8080/",
+    "ScheduledEventExecution": "None"
+  },
+  "Constants": {
+    "RPOBoxConfigurator.LogNodeName": "RPOBoxConfigurator",
+    "RPOBoxConfigurator.UseKeyboard": "False",
+    "CommunityCommons.MergeMultiplePdfs_MaxAtOnce": "10",
+    "ExcelImporter.EnableExternalEntities": "False"
+  },
+  "AdminPassword": "1"
+}

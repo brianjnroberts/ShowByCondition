@@ -1,0 +1,10 @@
+﻿Buildfile: Y:\w\ShowByCondition\ShowByCondition\test\RPOBoxConfigurator-feature_focus-mode\deployment\build_core.xml
+
+deploy:
+     [copy] Copying 45 files to Y:\w\ShowByCondition\ShowByCondition\test\RPOBoxConfigurator-feature_focus-mode\deployment
+     [copy] Copying 36 files to Y:\w\ShowByCondition\ShowByCondition\test\RPOBoxConfigurator-feature_focus-mode\deployment\model\lib\userlib
+
+BUILD SUCCESSFUL
+Total time: 1 second
+
+

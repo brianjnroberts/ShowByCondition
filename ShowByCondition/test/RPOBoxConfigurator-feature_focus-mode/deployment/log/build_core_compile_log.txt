@@ -1,0 +1,13 @@
+﻿Buildfile: Y:\w\ShowByCondition\ShowByCondition\test\RPOBoxConfigurator-feature_focus-mode\deployment\build_core.xml
+
+compile:
+    [javac] Compiling 4 source files to Y:\w\ShowByCondition\ShowByCondition\test\RPOBoxConfigurator-feature_focus-mode\deployment\run\bin
+
+build:
+      [bnd] # addAll 'deployment/run/bnd.bnd' with ,
+      [bnd] # project (project.jar) 318 
+
+BUILD SUCCESSFUL
+Total time: 7 seconds
+
+

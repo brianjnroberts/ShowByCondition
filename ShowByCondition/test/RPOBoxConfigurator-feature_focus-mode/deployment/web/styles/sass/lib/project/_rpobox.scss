@@ -1,0 +1,111 @@
+$a-height: 8vh;
+.lv-banks, .lv-rows, .lv-rows {
+    @extend .listview-stylingless;
+}
+.lv-banks > ul {
+    display: flex;
+}
+.lv-rows > ul {
+    display: flex;
+    flex-direction: column;
+}
+.lv-boxes > ul {
+    display: flex;
+}
+.lv-boxes > ul > li {
+    flex: 1;
+}
+.pobox-row.selected {
+    border: 1px solid  $brand-info-dark;
+    .box {
+        border: 1px solid grey;
+        background-color:  $brand-info-lighter;
+    }
+}
+.box {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 1px solid grey;
+    background-color: lightgray;
+    height: $a-height;
+    &.selected {
+        border: 1px solid $brand-info-dark;
+        background-color:  $brand-info-lighter;
+    }
+    > div {
+        font-family:monospace;
+        background-color: white;
+        width: 67%;
+        margin: 0 auto;
+    }
+    > div.nm-dot {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        height: 13px;
+        width: 13px;
+        background-color: red;
+        border-radius: 20px;
+    }
+}
+.double-height .box {
+    height: 2 * $a-height;
+}
+.lv-banks > ul > li > div {
+    margin-right: 0.25 * $a-height;
+    width: 2.5 * $a-height;
+}
+.wall-page-header {
+    // height: 53px;
+    padding: 1em;
+    border-bottom: 1px solid grey;
+    z-index: +1;
+    width: 100%;
+    background-color: white;
+    // position:fixed;
+    // top: 0px;
+    // +div {
+    //     margin-top: 53px;
+    // }
+}
+/*
+    @author: Conner Charlebois
+    @since: Aug 2, 2018
+*/
+a#atlwdg-trigger {
+    z-index: +1 !important; /* Sorry Russell but we need this :) */
+}
+/*
+    Add for search sidebar
+    ---
+    @author: Conner Charlebois
+    @since: Aug 8, 2018
+*/
+.mx-layoutcontainer-right.sidebar-right{
+    min-width: 470px;
+    // width: 0px !important;
+    // transition: all 0.5s;
+    // position: relative;
+    background-color: $gray-lighter;
+    // border-right: 1px solid $gray-primary;
+    border-left: 1px solid $gray-primary;
+    // //border: 1px solid $gray-primary;
+    // &.open {
+    //     width: 470px !important;
+    // }
+    // >div {
+    //     min-width: 470px;
+    // }
+    // button.handle{
+    //     position: absolute;
+    //     left: -61px;
+    //     z-index: +1;
+    //     top: 30%;
+    //     transform: rotate(270deg);
+    // }
+}
+.hiddenByWidget {
+    display: none;
+}
